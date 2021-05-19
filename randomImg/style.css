@@ -1,0 +1,27 @@
+body{
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    background-color: rgb(154, 167, 167);
+}
+
+h1{
+    text-align: center;
+    margin: 15px 0 0;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1300px;
+}
+.container img{
+    object-fit: cover;
+    margin: 10px;
+    height: 300px;
+    width: 300px;
+    max-width: 100%;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #boxCont{
+            flex-direction: row;
+        }
+        #box_1{
+            border: 1px solid;
+            order: 1;
+        }
+        #box_2{
+            order: 2;
+            border: 1px solid;
+        }
+        #box_3{
+            order: 3;
+            border: 1px solid;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="boxCont">
+        <div onclick="box1()" id="box_1">1</div>
+        <div onmousemove="box2()" id="box_2">2</div>
+        <input onchange="box3(this.value)" type="text">
+    </div>
+     <div id="infoDiv"></div>
+    <script>
+        function box1(){
+           let person = prompt('Who are you?', '');
+           if (person != null) infoDiv.innerHTML = "Elo' " + person + ", do i know ya?";
+        }
+        function box2(){
+            alert("Don't hover over me will ya?")
+
+        }
+
+        function box3(food){
+            return infoDiv.innerHTML = food[Math.floor(Math.random() * food.length)];
+        }
+    </script>
+</body>
+</html>
