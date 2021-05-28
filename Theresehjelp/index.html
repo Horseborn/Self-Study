@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Breadmoment</h1>
+    <div id="appInfo"></div>
+    <div id="appleInfo"></div>
+    <select id="mySelect" onchange="minFunction()">
+    <option value="Bread">Bread</option>
+    <option value="Kjøtt">Opposite of Bread!</option>
+    </select>
+    <p onclick="changeColor(this, 'blue')">Lorem ipsum dolor sit amet.</p>
+    <script>
+        let berlin = this.value;
+
+        Show();
+        function Show(){
+            document.getElementById("appInfo").innerHTML = `
+            
+            <button onclick='eatBread()'>heio</button>
+            
+            
+            `
+        }
+
+
+
+
+        function eatBread(){
+            document.getElementById('appleInfo').innerHTML = `${berlin}`;
+        }
+
+        function changeColor(elment, culor){
+            elment.style.color = culor;
+        }
+
+        function minFunction(){
+            let valg = document.getElementById('mySelect').value;
+            document.getElementById('appleInfo').innerHTML = 'Du har valgt ' + valg + ', var det korrekt?';
+        }
+    </script>
+</body>
+</html>
